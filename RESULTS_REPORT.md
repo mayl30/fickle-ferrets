@@ -6,12 +6,14 @@ Hopefully this isn't an issue, but although the ask was for the `/affirmation` e
 
 Now, calling `/experiment` will call the `/affirmations` endpoint as many times as you ask it to, randomly selecting either your new phrase or the champion phrase each time. You can check on the progress of the experiment in the endpoint `/experiment/history`, which will have a `status` field that will let you know whether the experiment is still "Pending", "Failed", or "Completed". Once all the runs have been "Completed" and you see that the status reflects this, you should also be able to see all the data that was relevant to analyzing the ferrets' reactions to your phrases. The endpoint response should include the phrases acting as variants A and B, as well as the number of runs allocated to each variant, the number of times each variant was reacted positively to, and the final approval rates for both variants in the given experiment (I'll attach a screenshot of one of the `/experiment/history` items here).
 
+<img width="347" height="227" alt="image" src="https://github.com/user-attachments/assets/a44f9174-f413-44ee-87af-9c03d1d5f240" />
+
 Additionally, as requested, I ran a few of my own tests using the following five phrases:
-- Marvelous Mischief Noodles
-- Functionally fabulous and fantastically ferret
-- It's always Treat Time somewhere
-- So much more than just a long raccoon
-- Pop goes the weasel but what about the ferret
+- "Marvelous Mischief Noodles"
+- "Functionally fabulous and fantastically ferret"
+- "It's always Treat Time somewhere"
+- "So much more than just a long raccoon"
+- "Pop goes the weasel but what about the ferret"
 
 The results of these experiments are laid out here:
 
@@ -52,4 +54,5 @@ The selection of whether A or B is being used is random, but in smaller sample s
 In short, I believe the next best steps to take would be to begin testing new phrases using these endpoints with larger sample sizes, and to record commonalities and patterns that can be observed in the phrases that the ferrets appear to like best. It would also likely be worth it to engage both employees and community members to pool as many potential phrases to test as you can gather, as hopefully these endpoints will make it much easier to sift through the suggestions that the ferrets like the best. If you would be intereted in automating the process of running experiments in succession given a list of phrases to test so that your researchers don't need to manually run each new affirmation through the `/experiment` endpoint manually, please just let me know and we can speak further. 
 
 Regards,
+
 Mary Luong
